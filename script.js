@@ -1,13 +1,18 @@
-document.querySelectorAll(".seta").forEach(seta => {
-  seta.addEventListener("click", () => {
-    const targetClass = seta.dataset.target;
-    const container = document.querySelector(`.carrossel.${targetClass}`);
-    const scrollAmount = 300; // distância que desliza por clique
+const btnAlunos = document.getElementById("btnAlunos");
+const btnAlunas = document.getElementById("btnAlunas");
+const containerAlunos = document.getElementById("containerAlunos");
+const containerAlunas = document.getElementById("containerAlunas");
 
-    if (seta.classList.contains("direita")) {
-      container.scrollBy({ left: scrollAmount, behavior: "smooth" });
-    } else {
-      container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-    }
-  });
+btnAlunos.addEventListener("click", () => {
+  btnAlunos.classList.add("ativo");
+  btnAlunas.classList.remove("ativo");
+  containerAlunos.classList.add("ativo");
+  containerAlunas.classList.remove("ativo");
+});
+
+btnAlunas.addEventListener("click", () => {
+  btnAlunas.classList.add("ativo");
+  btnAlunos.classList.remove("ativo");
+  containerAlunas.classList.add("ativo");
+  containerAlunos.classList.remove("ativo");
 });
