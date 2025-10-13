@@ -1,14 +1,18 @@
-const alunosGrupo = document.querySelector(".grupo.alunos");
-const alunasGrupo = document.querySelector(".grupo.alunas");
-const botaoProximo = document.getElementById("proximo");
-const botaoAnterior = document.getElementById("anterior");
+const btnAlunos = document.getElementById("btnAlunos");
+const btnAlunas = document.getElementById("btnAlunas");
+const containerAlunos = document.getElementById("containerAlunos");
+const containerAlunas = document.getElementById("containerAlunas");
 
-botaoProximo.addEventListener("click", () => {
-  alunosGrupo.classList.remove("ativo");
-  alunasGrupo.classList.add("ativo");
+btnAlunos.addEventListener("click", () => {
+  btnAlunos.classList.add("ativo");
+  btnAlunas.classList.remove("ativo");
+  containerAlunos.classList.add("ativo");
+  containerAlunas.classList.remove("ativo");
 });
 
-botaoAnterior.addEventListener("click", () => {
-  alunasGrupo.classList.remove("ativo");
-  alunosGrupo.classList.add("ativo");
+btnAlunas.addEventListener("click", () => {
+  btnAlunas.classList.add("ativo");
+  btnAlunos.classList.remove("ativo");
+  containerAlunas.classList.add("ativo");
+  containerAlunos.classList.remove("ativo");
 });
