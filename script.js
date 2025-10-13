@@ -1,16 +1,13 @@
-// animação de carrossel automático
-const track = document.querySelector('.carousel-track');
-const slides = Array.from(track.children);
-let index = 0;
+document.querySelectorAll(".seta").forEach(seta => {
+  seta.addEventListener("click", () => {
+    const targetClass = seta.dataset.target;
+    const container = document.querySelector(`.carrossel.${targetClass}`);
+    const scrollAmount = 300; // distância que desliza por clique
 
-function moveCarousel() {
-  index++;
-  if (index >= slides.length) {
-    index = 0;
-  }
-  const moveAmount = slides[index].offsetWidth * index;
-  track.style.transform = `translateX(-${moveAmount}px)`;
-}
-
-// muda o aluno a cada 3 segundos
-setInterval(moveCarousel, 3000);
+    if (seta.classList.contains("direita")) {
+      container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    } else {
+      container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+    }
+  });
+});
