@@ -8,6 +8,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+/* Cabeçalho */
 header {
   background-color: #424e61;
   color: white;
@@ -42,82 +43,101 @@ header {
   justify-content: center;
 }
 
+/* Seção de Estudantes */
 .estudante {
   background-color: #faae43;
-  padding: 24px 0 50px;
-  text-align: center;
+  padding: 24px 0;
 }
 
 .estudante_titulo {
-  padding: 20px;
   text-align: center;
   font-size: 26px;
-}
-
-.botoes-troca {
-  margin-bottom: 25px;
-}
-
-.botoes-troca button {
-  background-color: #424e61;
-  color: white;
-  border: none;
-  padding: 10px 30px;
-  margin: 0 10px;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: 0.3s;
-}
-
-.botoes-troca button:hover {
-  background-color: #30394a;
-}
-
-.botoes-troca .ativo {
-  background-color: #1e90ff;
-}
-
-.grid-container {
-  display: none;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
-  justify-items: center;
-  padding: 20px;
-}
-
-.grid-container.ativo {
-  display: grid;
-}
-
-.estudante-div {
-  background: white;
-  border-radius: 15px;
-  padding: 20px;
-  width: 80%;
-  max-width: 300px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
-  transition: transform 0.2s ease;
-}
-
-.estudante-div:hover {
-  transform: scale(1.05);
-}
-
-.estudante-imagem {
-  width: 100px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .estudante-nome {
-  font-weight: bold;
+  text-align: center;
 }
 
+.estudante-imagem {
+  width: 120px;
+  border-radius: 10px;
+}
+
+.estudantes_todos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+}
+
+.estudante-div {
+  text-align: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Carrossel */
+.carrossel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.carrossel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+  justify-content: center;
+}
+
+.grupo {
+  display: none;
+  width: 100%;
+}
+
+.grupo.ativo {
+  display: block;
+}
+
+.seta {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.3s;
+  z-index: 2;
+}
+
+.seta:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.seta.esquerda {
+  left: 20px;
+}
+
+.seta.direita {
+  right: 20px;
+}
+
+/* Rodapé */
 .escola {
   background-image: linear-gradient(#40A2E3, #7fc2ef);
   color: white;
-  padding: 24px 0;
   text-align: center;
+  padding: 30px 0;
 }
 
 .logo_rodape {
