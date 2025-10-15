@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("container-estudantes");
 
   const alunos = [
-    { nome: "Aluno 1", img: "estudante_menino.png" },
+    { nome: "Pedro", img: "estudante_menino.png" },
     { nome: "Aluno 2", img: "estudante_menino.png" },
     { nome: "Aluno 3", img: "estudante_menino.png" },
     { nome: "Aluno 4", img: "estudante_menino.png" }
