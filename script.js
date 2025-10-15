@@ -1,13 +1,15 @@
-// === GORDINHO BOLOLO CARROSSEL JS ===
-// Adiciona carrossel tipo Netflix sem alterar o HTML base
+// === GORDINHO BOLOLO CARROSSEL JS (versão corrigida) ===
+// Faz o carrossel apenas nas seções corretas (sem afetar o layout lateral)
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Seleciona todas as seções de estudantes
+  // Seleciona apenas seções com múltiplos estudantes
   const secoes = document.querySelectorAll(".estudante");
 
-  secoes.forEach((secao, index) => {
+  secoes.forEach((secao) => {
     const container = secao.querySelector(".estudantes_todos");
-    if (!container) return;
+
+    // Se não tiver container ou menos de 3 imagens, ignora (não é carrossel)
+    if (!container || container.querySelectorAll("img").length < 3) return;
 
     // Cria setas
     const setaEsquerda = document.createElement("button");
@@ -22,20 +24,23 @@ document.addEventListener("DOMContentLoaded", () => {
     const wrapper = document.createElement("div");
     wrapper.classList.add("carrossel-container");
 
-    // Insere setas e container dentro do wrapper
+    // Insere o wrapper no lugar do container
     container.parentNode.insertBefore(wrapper, container);
     wrapper.appendChild(setaEsquerda);
     wrapper.appendChild(container);
     wrapper.appendChild(setaDireita);
 
-    // Aplica estilos diretamente pelo JS (sem precisar mudar CSS)
+    // Aplica estilos dinamicamente
     Object.assign(container.style, {
       display: "flex",
       overflowX: "auto",
       scrollBehavior: "smooth",
-      gap: "40px",
-      padding: "20px",
+      gap: "60px",
+      padding: "20px 10px",
+      scrollbarWidth: "none",
     });
+
+    container.style.scrollbarWidth = "none";
 
     Object.assign(wrapper.style, {
       position: "relative",
@@ -43,6 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
       alignItems: "center",
       justifyContent: "center",
       overflow: "hidden",
+      width: "100%",
     });
 
     Object.assign(setaEsquerda.style, {
@@ -67,13 +73,19 @@ document.addEventListener("DOMContentLoaded", () => {
       right: "10px",
     });
 
-    // Funções de clique
+    // Animação de hover nas setas
+    setaEsquerda.addEventListener("mouseenter", () => setaEsquerda.style.backgroundColor = "rgba(0,0,0,0.8)");
+    setaDireita.addEventListener("mouseenter", () => setaDireita.style.backgroundColor = "rgba(0,0,0,0.8)");
+    setaEsquerda.addEventListener("mouseleave", () => setaEsquerda.style.backgroundColor = "rgba(0,0,0,0.5)");
+    setaDireita.addEventListener("mouseleave", () => setaDireita.style.backgroundColor = "rgba(0,0,0,0.5)");
+
+    // Movimento das setas
     setaDireita.addEventListener("click", () => {
-      container.scrollBy({ left: 300, behavior: "smooth" });
+      container.scrollBy({ left: 400, behavior: "smooth" });
     });
 
     setaEsquerda.addEventListener("click", () => {
-      container.scrollBy({ left: -300, behavior: "smooth" });
+      container.scrollBy({ left: -400, behavior: "smooth" });
     });
   });
 });
