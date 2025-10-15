@@ -1,18 +1,54 @@
-const btnAlunos = document.getElementById("btnAlunos");
-const btnAlunas = document.getElementById("btnAlunas");
-const containerAlunos = document.getElementById("containerAlunos");
-const containerAlunas = document.getElementById("containerAlunas");
+// Gordinho bololo 😎 — troca dinâmica entre Alunos e Alunas
 
-btnAlunos.addEventListener("click", () => {
-  btnAlunos.classList.add("ativo");
-  btnAlunas.classList.remove("ativo");
-  containerAlunos.classList.add("ativo");
-  containerAlunas.classList.remove("ativo");
-});
+document.addEventListener("DOMContentLoaded", () => {
+  const btnAlunos = document.getElementById("btn-alunos");
+  const btnAlunas = document.getElementById("btn-alunas");
+  const container = document.getElementById("container-estudantes");
 
-btnAlunas.addEventListener("click", () => {
-  btnAlunas.classList.add("ativo");
-  btnAlunos.classList.remove("ativo");
-  containerAlunas.classList.add("ativo");
-  containerAlunos.classList.remove("ativo");
+  const alunos = [
+    { nome: "Aluno 1", img: "aluno1.png" },
+    { nome: "Aluno 2", img: "aluno2.png" },
+    { nome: "Aluno 3", img: "aluno3.png" },
+    { nome: "Aluno 4", img: "aluno4.png" }
+  ];
+
+  const alunas = [
+    { nome: "Aluna 1", img: "aluna1.png" },
+    { nome: "Aluna 2", img: "aluna2.png" },
+    { nome: "Aluna 3", img: "aluna3.png" },
+    { nome: "Aluna 4", img: "aluna4.png" }
+  ];
+
+  function renderGrupo(grupo) {
+    container.style.opacity = "0";
+    setTimeout(() => {
+      container.innerHTML = grupo.map(estudante => `
+        <div class="estudante-div">
+          <img class="estudante-imagem" src="${estudante.img}" alt="${estudante.nome}">
+          <h3 class="estudante-nome">${estudante.nome}</h3>
+          <div>
+            <img class="estudante-icone" src="instagram.png" alt="Instagram">
+            <img class="estudante-icone" src="facebook.png" alt="Facebook">
+          </div>
+        </div>
+      `).join("");
+      container.style.opacity = "1";
+    }, 200);
+  }
+
+  // Eventos dos botões
+  btnAlunos.addEventListener("click", () => {
+    btnAlunos.classList.add("ativo");
+    btnAlunas.classList.remove("ativo");
+    renderGrupo(alunos);
+  });
+
+  btnAlunas.addEventListener("click", () => {
+    btnAlunas.classList.add("ativo");
+    btnAlunos.classList.remove("ativo");
+    renderGrupo(alunas);
+  });
+
+  // Render inicial
+  renderGrupo(alunos);
 });
