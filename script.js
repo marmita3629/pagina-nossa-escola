@@ -6,17 +6,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("container-estudantes");
 
   const alunos = [
-    { nome: "Aluno 1", img: "aluno1.png" },
-    { nome: "Aluno 2", img: "aluno2.png" },
-    { nome: "Aluno 3", img: "aluno3.png" },
-    { nome: "Aluno 4", img: "aluno4.png" }
+    { nome: "Aluno 1", img: "estudante_menino.png" },
+    { nome: "Aluno 2", img: "estudante_menino.png" },
+    { nome: "Aluno 3", img: "estudante_menino.png" },
+    { nome: "Aluno 4", img: "estudante_menino.png" }
   ];
 
   const alunas = [
-    { nome: "Aluna 1", img: "aluna1.png" },
-    { nome: "Aluna 2", img: "aluna2.png" },
-    { nome: "Aluna 3", img: "aluna3.png" },
-    { nome: "Aluna 4", img: "aluna4.png" }
+    { nome: "Aluna 1", img: "estudante_menina.png" },
+    { nome: "Aluna 2", img: "estudante_menina.png" },
+    { nome: "Aluna 3", img: "estudante_menina.png" },
+    { nome: "Aluna 4", img: "estudante_menina.png" }
   ];
 
   function renderGrupo(grupo) {
