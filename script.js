@@ -1,22 +1,18 @@
-// Gordinho bololo 2x1 Switch - Feito com carinho 😎
+const btnAlunos = document.getElementById("btnAlunos");
+const btnAlunas = document.getElementById("btnAlunas");
+const containerAlunos = document.getElementById("containerAlunos");
+const containerAlunas = document.getElementById("containerAlunas");
 
-document.addEventListener("DOMContentLoaded", () => {
-  const btnAlunos = document.getElementById("btn-alunos");
-  const btnAlunas = document.getElementById("btn-alunas");
-  const grupoAlunos = document.querySelector(".grupo-alunos");
-  const grupoAlunas = document.querySelector(".grupo-alunas");
+btnAlunos.addEventListener("click", () => {
+  btnAlunos.classList.add("ativo");
+  btnAlunas.classList.remove("ativo");
+  containerAlunos.classList.add("ativo");
+  containerAlunas.classList.remove("ativo");
+});
 
-  btnAlunos.addEventListener("click", () => {
-    grupoAlunos.classList.add("ativo");
-    grupoAlunas.classList.remove("ativo");
-    btnAlunos.classList.add("ativo");
-    btnAlunas.classList.remove("ativo");
-  });
-
-  btnAlunas.addEventListener("click", () => {
-    grupoAlunas.classList.add("ativo");
-    grupoAlunos.classList.remove("ativo");
-    btnAlunas.classList.add("ativo");
-    btnAlunos.classList.remove("ativo");
-  });
+btnAlunas.addEventListener("click", () => {
+  btnAlunas.classList.add("ativo");
+  btnAlunos.classList.remove("ativo");
+  containerAlunas.classList.add("ativo");
+  containerAlunos.classList.remove("ativo");
 });
