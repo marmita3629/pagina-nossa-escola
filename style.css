@@ -181,14 +181,12 @@ footer.escola {
 }
 /* --- FIM DOS NOVOS ESTILOS --- */
 
-/* ====== CARROSSEL ====== */
 .carrossel {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #eef2f5;
   padding: 30px 0;
-  position: relative;
   gap: 15px;
 }
 
@@ -198,6 +196,7 @@ footer.escola {
   border-radius: 20px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   transition: opacity 0.4s ease-in-out;
+  display: block; /* Mostra só uma imagem */
 }
 
 .carrossel-btn {
