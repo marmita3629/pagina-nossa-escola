@@ -16,16 +16,20 @@ header {
 }
 
 .cabecalho-itens {
- display: flex;
- align-items: center;
- justify-content: center; /* MUDADO de 'center' */
+display: flex;
+align-items: center;
+justify-content: space-between; /* ALTERADO: para espaçar os elementos */
+padding: 0 20px; /* Adicionado um padding horizontal para não grudar nas bordas */
 }
 
+
+
 .titulo_site {
- padding: 50px;
+ /* ALTERADO: remove padding grande e alinha o texto */
+ /* O alinhamento horizontal já deve estar resolvido pelo flexbox no .cabecalho-itens */
  text-align: center;
- /* width: 50%; FOI REMOVIDO para deixar o layout flexível */
  font-size: 30px;
+ /* padding: 50px; REMOVIDO */
 }
 
 .sociais {
@@ -182,27 +186,30 @@ footer.escola {
 /* --- FIM DOS NOVOS ESTILOS --- */
 
 .carrossel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #eef2f5;
-  padding: 30px 0;
-  gap: 15px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background-color: #eef2f5;
+ padding: 30px 0;
+ gap: 40px; /* ALTERADO: Aumentei o espaçamento para o título caber bem */
 }
 
 .carrosel_titulo{
-  text-align: center;
-  margin: 10px 0;
-  font-weight: bold;
+ text-align: center;
+ margin: 10px 0;
+ font-weight: bold;
+ /* ESTE É O NOVIDADES. Ele agora é um item flex e vai se posicionar como o segundo item */
+ /* Adicionei um tamanho para que ele não quebre muito */
+ width: 150px;
 }
 
-.carrossel img {
-  width: 80%;
-  max-width: 800px;
-  border-radius: 20px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-  transition: opacity 0.4s ease-in-out;
-  display: block; /* Mostra só uma imagem */
+.carrossel img { /* MANTIDO: Ajuste o tamanho da imagem para melhor visualização no novo layout */
+ width: auto; /* Deixa a imagem se adaptar ao carrossel */
+ max-width: 500px; /* Reduzi o max-width para o título caber ao lado */
+ border-radius: 20px;
+ box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+ transition: opacity 0.4s ease-in-out;
+ display: block;
 }
 
 .carrossel-btn {
