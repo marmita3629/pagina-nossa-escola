@@ -1,5 +1,10 @@
 // Gordinho bololo 😎 — troca dinâmica entre Alunos e Alunas
 
+if (sessionStorage.getItem("logado") !== "true") {
+  window.location.href = "login.html";
+}
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const btnAlunos = document.getElementById("btn-alunos");
   const btnAlunas = document.getElementById("btn-alunas");
