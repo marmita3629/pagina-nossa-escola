@@ -214,3 +214,7 @@ footer.escola {
 .carrossel-btn:hover {
   background-color: #40a2e3;
 }
+
+.carrossel img {
+  display: block;
+}
