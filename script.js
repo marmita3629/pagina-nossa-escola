@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // 🖼️ CARROSSEL DE IMAGENS
   // ==============================
   const carrosselImgs = [
-    "carrossel1.jpg",
+    "imagens escola.jpg",
     "carrossel2.jpg",
     "carrossel3.jpg"
   ];
