@@ -16,23 +16,23 @@ header {
 }
 
 .cabecalho-itens {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* MUDADO de 'center' */
 }
 
 .titulo_site {
-  padding: 50px;
-  text-align: center;
-  width: 50%;
-  font-size: 30px;
+  padding: 50px;
+  text-align: center;
+  /* width: 50%; FOI REMOVIDO para deixar o layout flexível */
+  font-size: 30px;
 }
 
 .sociais {
-  display: flex;
-  justify-content: flex-end;
-  width: 25%;
-  padding-right: 30px;
+  display: flex;
+  /* justify-content: flex-end; FOI REMOVIDO */
+  /* width: 25%; FOI REMOVIDO */
+  /* padding-right: 30px; FOI REMOVIDO */
 }
 
 .banner1 {
@@ -134,3 +134,49 @@ footer.escola {
   color: #fff;
   text-decoration: none;
 }
+
+/* --- NOVOS ESTILOS PARA HEADER --- */
+
+/* Este é o novo container da direita */
+.cabecalho-direita {
+  display: flex;
+  align-items: center;
+  gap: 25px; /* Espaço entre os ícones sociais e o botão de login */
+  padding-right: 30px; /* Mantém o espaçamento da borda que você tinha */
+}
+
+/* Esta é a nova classe para os ícones sociais */
+/* (Você tinha a classe .sociais nas imagens, o que causava conflito) */
+.sociais-icone {
+  width: 30px; 
+  height: 30px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.sociais-icone:hover {
+  transform: scale(1.2);
+}
+
+/* Container do botão de login */
+.login-area {
+  display: flex;
+  align-items: center;
+}
+
+/* Estilo do botão de login */
+.btn-login {
+  background-color: #40a2e3; /* Cor azul do seu site */
+  color: white;
+  padding: 8px 20px;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn-login:hover {
+  background-color: #2f3847; /* Cor de hover dos seus outros botões */
+}
+/* --- FIM DOS NOVOS ESTILOS --- */
