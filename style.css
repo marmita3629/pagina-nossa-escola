@@ -191,10 +191,9 @@ footer.escola {
 }
 
 .carrosel_titulo{
-padding: 50px;
- text-align: center;
- /* width; 50%;-------------------------*/ 
- font-size: 30px;
+  text-align: center;
+  margin: 10px 0;
+  font-weight: bold;
 }
 
 .carrossel img {
