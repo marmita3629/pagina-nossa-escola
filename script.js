@@ -52,3 +52,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // Render inicial
   renderGrupo(alunos);
 });
+
+const carrosselImgs = [
+  "comunicado.jpeg",
+  "imagens_escola.jpg",
+  "rematricula.jepg"
+];
