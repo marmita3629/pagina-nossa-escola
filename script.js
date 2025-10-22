@@ -58,8 +58,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // ==============================
   const carrosselImgs = [
     "imagens_escola.jpg",
-    "imagens_escola.jpg",
-    "imagens_escola.jpg"
+    "rematricula.jpeg",
+    "comunicado.jpeg"
   ];
   let indexAtual = 0;
 
