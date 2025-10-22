@@ -1,7 +1,7 @@
 // Gordinho bololo 😎 — troca dinâmica entre Alunos e Alunas
 
 if (sessionStorage.getItem("logado") !== "true") {
-  window.location.href = "login.html";
+  window.location.href = "index.html";
 }
 
 

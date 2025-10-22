@@ -1,99 +1,79 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Meu Site</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        background: #121212;
-        color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-    }
-
-    .login-container {
-        background: #1e1e1e;
-        width: 350px;
-        padding: 30px;
-        border-radius: 10px;
-        text-align: center;
-        box-shadow: 0px 0px 15px #000;
-    }
-
-    .login-container h2 {
-        margin-bottom: 20px;
-    }
-
-    .login-container input {
-        width: 90%;
-        padding: 10px;
-        margin: 10px 0;
-        border-radius: 6px;
-        border: none;
-    }
-
-    .login-container button {
-        background: #6200EE;
-        border: none;
-        padding: 12px;
-        width: 100%;
-        border-radius: 6px;
-        margin-top: 10px;
-        cursor: pointer;
-        font-size: 16px;
-        color: white;
-    }
-
-    .login-container button:hover {
-        background: #7a33ff;
-    }
-
-    a {
-        color: #7a33ff;
-        text-decoration: none;
-        display: block;
-        margin-top: 12px;
-    }
-</style>
-
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #f2f2f2;
+        }
+        .login-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            width: 300px;
+            text-align: center;
+        }
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #aaa;
+        }
+        button {
+            width: 95%;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
 
     <div class="login-container">
-        <h2>Entrar</h2>
-        <form action="home.html" method="POST"> <!-- Troque para sua página principal depois -->
+        <h2>Login</h2>
+        <form id="formLogin">
             <input type="text" name="usuario" placeholder="Usuário" required>
             <input type="password" name="senha" placeholder="Senha" required>
-            <button type="submit">Login</button>
+            <button type="submit">Entrar</button>
         </form>
-
-        <a href="cadastro.html">Criar conta</a>
     </div>
 
-<script>
-    const usuarioCorreto = "admin";
-    const senhaCorreta = "1234";
+    <script>
+        const usuarioCorreto = "admin";
+        const senhaCorreta = "1234";
 
-    const form = document.querySelector("form");
-    form.addEventListener("submit", function(event) {
-        event.preventDefault(); // Impede o envio do formulário direto
+        const form = document.getElementById("formLogin");
 
-        const usuario = form.usuario.value;
-        const senha = form.senha.value;
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
 
-        if (usuario === usuarioCorreto && senha === senhaCorreta) {
-            alert("Login realizado com sucesso!");
-            window.location.href = "home.html"; // Página que vai abrir ao logar
-        } else {
-            alert("Usuário ou senha incorretos!");
-        }
-    });
-</script>
+            const usuario = form.usuario.value;
+            const senha = form.senha.value;
+
+            if (usuario === usuarioCorreto && senha === senhaCorreta) {
+                alert("Login realizado com sucesso!");
+                window.location.href = "index.html"; // Vai para a sua página!
+            } else {
+                alert("Usuário ou senha incorretos!");
+            }
+        });
+    </script>
 
 </body>
 </html>
