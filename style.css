@@ -190,6 +190,13 @@ footer.escola {
   gap: 15px;
 }
 
+.carrosel_titulo{
+padding: 50px;
+ text-align: center;
+ /* width; 50%;-------------------------*/ 
+ font-size: 30px;
+}
+
 .carrossel img {
   width: 80%;
   max-width: 800px;
