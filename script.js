@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnAlunos = document.getElementById("btn-alunos");
   const btnAlunas = document.getElementById("btn-alunas");
   const container = document.getElementById("container-estudantes");
+ });
 
   const alunos = [
     { nome: "Pedro Álvares Cabral", img: "estudante_menino.png" },
