@@ -18,21 +18,21 @@ header {
 .cabecalho-itens {
  display: flex;
  align-items: center;
- justify-content: space-between; /* MUDADO de 'center' */
+ justify-content: space-between; 
 }
 
 .titulo_site {
  padding: 50px;
  text-align: center;
- /* width: 50%; FOI REMOVIDO para deixar o layout flexível */
+  width: 50%;
  font-size: 30px;
 }
 
 .sociais {
  display: flex;
- /* justify-content: flex-end; FOI REMOVIDO */
- /* width: 25%; FOI REMOVIDO */
- /* padding-right: 30px; FOI REMOVIDO */
+ justify-content: flex-end;
+ width: 25%;
+ padding-right: 30px;
 }
 
 .banner1 {
