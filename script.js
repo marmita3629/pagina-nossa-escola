@@ -1,11 +1,9 @@
-// ==============================
-// 👦 ALUNOS E 👧 ALUNAS
-// ==============================
+// Gordinho bololo 😎 — troca dinâmica entre Alunos e Alunas
+
 document.addEventListener("DOMContentLoaded", () => {
   const btnAlunos = document.getElementById("btn-alunos");
   const btnAlunas = document.getElementById("btn-alunas");
   const container = document.getElementById("container-estudantes");
- });
 
   const alunos = [
     { nome: "Pedro Álvares Cabral", img: "estudante_menino.png" },
@@ -38,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 200);
   }
 
+  // Eventos dos botões
   btnAlunos.addEventListener("click", () => {
     btnAlunos.classList.add("ativo");
     btnAlunas.classList.remove("ativo");
@@ -52,23 +51,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Render inicial
   renderGrupo(alunos);
-
-  // ==============================
-  // 🖼️ CARROSSEL DE IMAGENS
-  // ==============================
- const imagens = ["comunicado.jpeg", "imagens_escola.jpg", "rematricula.jpeg"];
-let index = 0;
-
-const imgCarrossel = document.getElementById("carrossel-img");
-const btnPrev = document.getElementById("btn-prev");
-const btnNext = document.getElementById("btn-next");
-
-btnPrev.addEventListener("click", () => {
-  index = (index - 1 + imagens.length) % imagens.length;
-  imgCarrossel.src = imagens[index];
-});
-
-btnNext.addEventListener("click", () => {
-  index = (index + 1) % imagens.length;
-  imgCarrossel.src = imagens[index];
 });
