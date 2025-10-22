@@ -55,20 +55,19 @@ document.addEventListener("DOMContentLoaded", () => {
   // ==============================
   // 🖼️ CARROSSEL DE IMAGENS
   // ==============================
-  const carrosselImg = document.getElementById("carrossel-img");
-  const imagens = ["comunicado.jpeg", "imagens_escola.jpg", "rematricula.jpeg"];
-  let indice = 0;
+ const imagens = ["comunicado.jpeg", "imagens_escola.jpg", "rematricula.jpeg"];
+let index = 0;
 
-  const btnNext = document.getElementById("btn-next");
-  const btnPrev = document.getElementById("btn-prev");
+const imgCarrossel = document.getElementById("carrossel-img");
+const btnPrev = document.getElementById("btn-prev");
+const btnNext = document.getElementById("btn-next");
 
-  btnNext.addEventListener("click", () => {
-    indice = (indice + 1) % imagens.length;
-    carrosselImg.src = imagens[indice];
-  });
+btnPrev.addEventListener("click", () => {
+  index = (index - 1 + imagens.length) % imagens.length;
+  imgCarrossel.src = imagens[index];
+});
 
-  btnPrev.addEventListener("click", () => {
-    indice = (indice - 1 + imagens.length) % imagens.length;
-    carrosselImg.src = imagens[indice];
-  });
+btnNext.addEventListener("click", () => {
+  index = (index + 1) % imagens.length;
+  imgCarrossel.src = imagens[index];
 });
