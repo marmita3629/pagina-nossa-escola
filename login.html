@@ -75,5 +75,25 @@
         <a href="cadastro.html">Criar conta</a>
     </div>
 
+<script>
+    const usuarioCorreto = "admin";
+    const senhaCorreta = "1234";
+
+    const form = document.querySelector("form");
+    form.addEventListener("submit", function(event) {
+        event.preventDefault(); // Impede o envio do formulário direto
+
+        const usuario = form.usuario.value;
+        const senha = form.senha.value;
+
+        if (usuario === usuarioCorreto && senha === senhaCorreta) {
+            alert("Login realizado com sucesso!");
+            window.location.href = "home.html"; // Página que vai abrir ao logar
+        } else {
+            alert("Usuário ou senha incorretos!");
+        }
+    });
+</script>
+
 </body>
 </html>
