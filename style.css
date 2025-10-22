@@ -84,23 +84,33 @@ header {
   transition: opacity 0.4s ease-in-out;
 }
 
+/* ... código anterior ... */
+
 .estudante-div {
-  background-color: #fff;
-  border-radius: 15px;
-  width: 250px;
-  padding: 15px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
+ background-color: #fff;
+ border-radius: 15px;
+ width: 250px;
+ padding: 15px;
+ box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+ transition: transform 0.3s ease;
 }
 
 .estudante-div:hover {
-  transform: scale(1.05);
+ transform: scale(1.05);
 }
 
 .estudante-imagem {
-  width: 100%;
-  border-radius: 10px;
+ /* MANTIDO: Largura total do container (250px - padding) */
+ width: 100%;
+ /* NOVO: Define a altura igual à largura do container para criar um quadrado */
+ height: 220px; /* Ajuste o valor se necessário, mas 220px é próximo da largura interna (250px - 2*15px = 220px) */
+ /* NOVO: Garante que a imagem preencha o espaço sem distorcer e cortando o que não cabe */
+ object-fit: cover; 
+ /* MANTIDO: Borda */
+ border-radius: 10px;
 }
+
+/* ... código posterior ... */
 
 .estudante-nome {
   text-align: center;
