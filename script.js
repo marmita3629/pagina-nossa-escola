@@ -57,29 +57,29 @@ document.addEventListener("DOMContentLoaded", () => {
   // 🖼️ CARROSSEL DE IMAGENS
   // ==============================
   const carrosselImgs = [
-    "imagens_escola.jpg",
-    "rematricula.jpeg",
-    "comunicado.jpeg"
-  ];
-  let indexAtual = 0;
+  "imagens/carrossel1.jpg",
+  "imagens/carrossel2.jpg",
+  "imagens/carrossel3.jpg"
+];
+let indexAtual = 0;
 
-  const carrosselImg = document.getElementById("carrossel-img");
-  const btnPrev = document.getElementById("btn-prev");
-  const btnNext = document.getElementById("btn-next");
+const carrosselImg = document.getElementById("carrossel-img");
+const btnPrev = document.getElementById("btn-prev");
+const btnNext = document.getElementById("btn-next");
 
-  function mudarImagem(direcao) {
-    if (direcao === "next") {
-      indexAtual = (indexAtual + 1) % carrosselImgs.length;
-    } else {
-      indexAtual = (indexAtual - 1 + carrosselImgs.length) % carrosselImgs.length;
-    }
-
-    carrosselImg.style.opacity = "0";
-    setTimeout(() => {
-      carrosselImg.src = carrosselImgs[indexAtual];
-      carrosselImg.style.opacity = "1";
-    }, 200);
+function mudarImagem(direcao) {
+  if (direcao === "next") {
+    indexAtual = (indexAtual + 1) % carrosselImgs.length;
+  } else {
+    indexAtual = (indexAtual - 1 + carrosselImgs.length) % carrosselImgs.length;
   }
 
-  btnPrev.addEventListener("click", () => mudarImagem("prev"));
-  btnNext.addEventListener("click", () => mudarImagem("next"));
+  carrosselImg.style.opacity = "0";
+  setTimeout(() => {
+    carrosselImg.src = carrosselImgs[indexAtual];
+    carrosselImg.style.opacity = "1";
+  }, 200);
+}
+
+btnPrev.addEventListener("click", () => mudarImagem("prev"));
+btnNext.addEventListener("click", () => mudarImagem("next"));
