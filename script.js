@@ -57,9 +57,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // 🖼️ CARROSSEL DE IMAGENS
   // ==============================
   const carrosselImgs = [
-    "carrossel1.jpg",
-    "carrossel2.jpg",
-    "carrossel3.jpg"
+    "comunicado.jpeg",
+    "imagens_escola.jpg",
+    "rematricula.jpeg"
   ];
   let indexAtual = 0;
 
@@ -83,9 +83,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
   btnPrev.addEventListener("click", () => mudarImagem("prev"));
   btnNext.addEventListener("click", () => mudarImagem("next"));
-
-  const carrosselImgs = [
-  "comunicado.jpeg",
-  "imagens_escola.jpg",
-  "rematricula.jpeg"
-];
