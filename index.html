@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initialscale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Home | Nossa Escola</title>
 <link rel="stylesheet" href="style.css">
 </head>
@@ -25,20 +25,27 @@
   </div>
 
 </header>
+
+<!-- BANNER PRINCIPAL -->
 <section class="banner1">
-  <img class="escola.image" src="paragrafo_1_banner.jpg" alt="Banner da Escola">
+  <img class="escola-image" src="paragrafo_1_banner.jpg" alt="Banner da Escola">
+</section>
+
+<!-- CARROSSEL DE IMAGENS -->
+<section class="carrossel">
+  <button id="btn-prev" class="carrossel-btn">⮜</button>
+  <img id="carrossel-img" src="carrossel1.jpg" alt="Imagem do Carrossel">
+  <button id="btn-next" class="carrossel-btn">⮞</button>
 </section>
 
 <section class="estudante">
   <h1 class="estudante_titulo">Alunos em destaque 2025</h1>
-  
   <div class="botoes-controle">
     <button id="btn-alunos" class="ativo">Alunos</button>
     <button id="btn-alunas">Alunas</button>
   </div>
 
-  <div class="estudantes_todos" id="container-estudantes">
-    </div>
+  <div class="estudantes_todos" id="container-estudantes"></div>
 </section>
 
 <footer class="escola">

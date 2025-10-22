@@ -16,23 +16,23 @@ header {
 }
 
 .cabecalho-itens {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* MUDADO de 'center' */
+ display: flex;
+ align-items: center;
+ justify-content: space-between; /* MUDADO de 'center' */
 }
 
 .titulo_site {
-  padding: 50px;
-  text-align: center;
-  /* width: 50%; FOI REMOVIDO para deixar o layout flexível */
-  font-size: 30px;
+ padding: 50px;
+ text-align: center;
+ /* width: 50%; FOI REMOVIDO para deixar o layout flexível */
+ font-size: 30px;
 }
 
 .sociais {
-  display: flex;
-  /* justify-content: flex-end; FOI REMOVIDO */
-  /* width: 25%; FOI REMOVIDO */
-  /* padding-right: 30px; FOI REMOVIDO */
+ display: flex;
+ /* justify-content: flex-end; FOI REMOVIDO */
+ /* width: 25%; FOI REMOVIDO */
+ /* padding-right: 30px; FOI REMOVIDO */
 }
 
 .banner1 {
@@ -180,3 +180,37 @@ footer.escola {
   background-color: #2f3847; /* Cor de hover dos seus outros botões */
 }
 /* --- FIM DOS NOVOS ESTILOS --- */
+
+/* ====== CARROSSEL ====== */
+.carrossel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eef2f5;
+  padding: 30px 0;
+  position: relative;
+  gap: 15px;
+}
+
+.carrossel img {
+  width: 80%;
+  max-width: 800px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.4s ease-in-out;
+}
+
+.carrossel-btn {
+  background-color: #424e61;
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carrossel-btn:hover {
+  background-color: #40a2e3;
+}

@@ -52,3 +52,34 @@ document.addEventListener("DOMContentLoaded", () => {
   // Render inicial
   renderGrupo(alunos);
 });
+
+  // ==============================
+  // 🖼️ CARROSSEL DE IMAGENS
+  // ==============================
+  const carrosselImgs = [
+    "carrossel1.jpg",
+    "carrossel2.jpg",
+    "carrossel3.jpg"
+  ];
+  let indexAtual = 0;
+
+  const carrosselImg = document.getElementById("carrossel-img");
+  const btnPrev = document.getElementById("btn-prev");
+  const btnNext = document.getElementById("btn-next");
+
+  function mudarImagem(direcao) {
+    if (direcao === "next") {
+      indexAtual = (indexAtual + 1) % carrosselImgs.length;
+    } else {
+      indexAtual = (indexAtual - 1 + carrosselImgs.length) % carrosselImgs.length;
+    }
+
+    carrosselImg.style.opacity = "0";
+    setTimeout(() => {
+      carrosselImg.src = carrosselImgs[indexAtual];
+      carrosselImg.style.opacity = "1";
+    }, 200);
+  }
+
+  btnPrev.addEventListener("click", () => mudarImagem("prev"));
+  btnNext.addEventListener("click", () => mudarImagem("next"));
