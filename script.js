@@ -56,30 +56,17 @@ document.addEventListener("DOMContentLoaded", () => {
   // ==============================
   // 🖼️ CARROSSEL DE IMAGENS
   // ==============================
-  const carrosselImgs = [
-  "imagens/carrossel1.jpg",
-  "imagens/carrossel2.jpg",
-  "imagens/carrossel3.jpg"
-];
-let indexAtual = 0;
-
 const carrosselImg = document.getElementById("carrossel-img");
-const btnPrev = document.getElementById("btn-prev");
-const btnNext = document.getElementById("btn-next");
+const imagens = ["comunicado.jpeg", "imagens_escola.jpg", "rematricula.jpeg"];
+let indice = 0;
 
-function mudarImagem(direcao) {
-  if (direcao === "next") {
-    indexAtual = (indexAtual + 1) % carrosselImgs.length;
-  } else {
-    indexAtual = (indexAtual - 1 + carrosselImgs.length) % carrosselImgs.length;
-  }
+document.getElementById("btn-next").addEventListener("click", () => {
+  indice = (indice + 1) % imagens.length;
+  carrosselImg.src = imagens[indice];
+});
 
-  carrosselImg.style.opacity = "0";
-  setTimeout(() => {
-    carrosselImg.src = carrosselImgs[indexAtual];
-    carrosselImg.style.opacity = "1";
-  }, 200);
-}
+document.getElementById("btn-prev").addEventListener("click", () => {
+  indice = (indice - 1 + imagens.length) % imagens.length;
+  carrosselImg.src = imagens[indice];
+});
 
-btnPrev.addEventListener("click", () => mudarImagem("prev"));
-btnNext.addEventListener("click", () => mudarImagem("next"));
