@@ -56,7 +56,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // ==============================
   // 🖼️ CARROSSEL DE IMAGENS
   // ==============================
-  const carrosselImgs = ["comunicado.jpeg","matricula.jpeg","rematricula.jpeg"];
+  const carrosselImgs = ["comunicado.jpeg",
+    "matricula.jpeg",
+    "rematricula.jpeg"
+  ];
   let indexAtual = 0;
 
   const carrosselImg = document.getElementById("carrossel-img");
