@@ -215,6 +215,7 @@ footer.escola {
   background-color: #40a2e3;
 }
 
-.carrossel img {
-  display: block;
+
+body > img {
+  display: none !important;
 }

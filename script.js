@@ -1,5 +1,6 @@
-// Gordinho bololo 😎 — troca dinâmica entre Alunos e Alunas
-
+// ==============================
+// 👦 ALUNOS E 👧 ALUNAS
+// ==============================
 document.addEventListener("DOMContentLoaded", () => {
   const btnAlunos = document.getElementById("btn-alunos");
   const btnAlunas = document.getElementById("btn-alunas");
@@ -36,7 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 200);
   }
 
-  // Eventos dos botões
   btnAlunos.addEventListener("click", () => {
     btnAlunos.classList.add("ativo");
     btnAlunas.classList.remove("ativo");
@@ -51,22 +51,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Render inicial
   renderGrupo(alunos);
-});
 
   // ==============================
   // 🖼️ CARROSSEL DE IMAGENS
   // ==============================
-const carrosselImg = document.getElementById("carrossel-img");
-const imagens = ["comunicado.jpeg", "imagens_escola.jpg", "rematricula.jpeg"];
-let indice = 0;
+  const carrosselImg = document.getElementById("carrossel-img");
+  const imagens = ["comunicado.jpeg", "imagens_escola.jpg", "rematricula.jpeg"];
+  let indice = 0;
 
-document.getElementById("btn-next").addEventListener("click", () => {
-  indice = (indice + 1) % imagens.length;
-  carrosselImg.src = imagens[indice];
+  const btnNext = document.getElementById("btn-next");
+  const btnPrev = document.getElementById("btn-prev");
+
+  btnNext.addEventListener("click", () => {
+    indice = (indice + 1) % imagens.length;
+    carrosselImg.src = imagens[indice];
+  });
+
+  btnPrev.addEventListener("click", () => {
+    indice = (indice - 1 + imagens.length) % imagens.length;
+    carrosselImg.src = imagens[indice];
+  });
 });
-
-document.getElementById("btn-prev").addEventListener("click", () => {
-  indice = (indice - 1 + imagens.length) % imagens.length;
-  carrosselImg.src = imagens[indice];
-});
-
