@@ -18,7 +18,7 @@ header {
 .cabecalho-itens {
  display: flex;
  align-items: center;
- justify-content: space-between; /* MUDADO de 'center' */
+ justify-content: center; /* MUDADO de 'center' */
 }
 
 .titulo_site {
