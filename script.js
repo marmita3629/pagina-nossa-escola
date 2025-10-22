@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const alunos = [
     { nome: "Pedro Álvares Cabral", img: "estudante_menino.png" },
     { nome: "Leonardo da Vinci", img: "estudante_menino.png" },
-    { nome: "Luiz Gonzaga", img: "estudante_menino.png" },
+    { nome: "Luiz Gonzaga", img: "luizgonzaga.webp" },
     { nome: "Carlinhos Maia", img: "estudante_menino.png" }
   ];
 
