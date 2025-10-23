@@ -16,17 +16,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("container-estudantes");
 
   const alunos = [
-    { nome: "Pedro Álvares Cabral", img: "estudante_menino.png" },
-    { nome: "Leonardo da Vinci", img: "estudante_menino.png" },
-    { nome: "Luiz Gonzaga", img: "luizgonzaga.webp" },
-    { nome: "Carlinhos Maia", img: "estudante_menino.png" }
+    { nome: "Pedro Álvares Cabral", img: "pedro.jpg" },
+    { nome: "Leonardo da Vinci", img: "leonardo.jpg" },
+    { nome: "Luiz Gonzaga", img: "luiz.jpg" },
+    { nome: "Carlinhos Maia", img: "carlinhos.jpg" }
   ];
 
   const alunas = [
-    { nome: "Elizabeth II", img: "estudante_menina.png" },
-    { nome: "Malala Yousafzai", img: "estudante_menina.png" },
-    { nome: "Maria da Penha", img: "estudante_menina.png" },
-    { nome: "Maria I", img: "estudante_menina.png" }
+    { nome: "Elizabeth II", img: "rainha.jpg" },
+    { nome: "Malala Yousafzai", img: "malala.jpg" },
+    { nome: "Maria da Penha", img: "maria_penha.jpg" },
+    { nome: "Maria I", img: "maria.jpg" }
   ];
 
   function renderGrupo(grupo) {
