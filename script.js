@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
  // ==============================
- // LOGOUT (CÓDIGO NOVO)
+ // LOGOUT 
  // ==============================
  const btnLogout = document.getElementById("btn-logout");
 
@@ -122,4 +122,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-}); // <-- FIM DO DOMCONTENTLOADED
+}); 
