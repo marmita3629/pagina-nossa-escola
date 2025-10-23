@@ -1,8 +1,8 @@
 // 1. VERIFICAÇÃO DE LOGIN
 // Isso executa antes de tudo. Se não estiver logado, nem carrega o resto.
 if (sessionStorage.getItem("logado") !== "true") {
-  // MANDA PARA O LOGIN SE NÃO ESTIVER LOGADO
-  window.location.href = "login.html"; 
+ // MANDA PARA O LOGIN SE NÃO ESTIVER LOGADO
+ window.location.href = "login.html"; 
 }
 
 
@@ -10,28 +10,28 @@ if (sessionStorage.getItem("logado") !== "true") {
 // Espera o HTML ser carregado antes de executar qualquer código
 document.addEventListener("DOMContentLoaded", () => {
 
-  // Gordinho bololo 😎 — troca dinâmica entre Alunos e Alunas
-  const btnAlunos = document.getElementById("btn-alunos");
-  const btnAlunas = document.getElementById("btn-alunas");
-  const container = document.getElementById("container-estudantes");
+ //troca dinâmica entre Alunos e Alunas
+ const btnAlunos = document.getElementById("btn-alunos");
+ const btnAlunas = document.getElementById("btn-alunas");
+ const container = document.getElementById("container-estudantes");
 
-  const alunos = [
-    { nome: "Pedro Álvares Cabral", img: "pedro.jpg" },
-    { nome: "Leonardo da Vinci", img: "leonardo.jpg" },
-    { nome: "Luiz Gonzaga", img: "luiz.jpg" },
-    { nome: "Carlinhos Maia", img: "carlinhos.jpg" }
-  ];
+ const alunos = [
+  { nome: "Pedro Álvares Cabral", img: "pedro.jpg" },
+  { nome: "Leonardo da Vinci", img: "leonardo.jpg" },
+  { nome: "Luiz Gonzaga", img: "luiz.jpg" },
+  { nome: "Carlinhos Maia", img: "carlinhos.jpg" }
+ ];
 
-  const alunas = [
-    { nome: "Elizabeth II", img: "rainha.jpg" },
-    { nome: "Malala Yousafzai", img: "malala.jpg" },
-    { nome: "Maria da Penha", img: "maria_penha.jpg" },
-    { nome: "Maria I", img: "maria.jpg" }
-  ];
+ const alunas = [
+  { nome: "Elizabeth II", img: "rainha.jpg" },
+  { nome: "Malala Yousafzai", img: "malala.jpg" },
+  { nome: "Maria da Penha", img: "maria_penha.jpg" },
+  { nome: "Maria I", img: "maria.jpg" }
+ ];
 
-  function renderGrupo(grupo) {
+ function renderGrupo(grupo) {
     // Verifica se o container existe na página
-    if (container) { 
+  if (container) { 
       container.style.opacity = "0";
       setTimeout(() => {
         container.innerHTML = grupo.map(estudante => `
@@ -47,11 +47,10 @@ document.addEventListener("DOMContentLoaded", () => {
         container.style.opacity = "1";
       }, 200);
     }
-  }
-
-  // Eventos dos botões Alunos/Alunas
+ }
+ // Eventos dos botões Alunos/Alunas
   // Adiciona verificação se os botões existem
-  if (btnAlunos && btnAlunas) {
+ if (btnAlunos && btnAlunas) {
     btnAlunos.addEventListener("click", () => {
       btnAlunos.classList.add("ativo");
       btnAlunas.classList.remove("ativo");
@@ -68,27 +67,26 @@ document.addEventListener("DOMContentLoaded", () => {
     renderGrupo(alunos);
   }
 
-
-  // ==============================
-  // 🖼️ CARROSSEL DE IMAGENS
-  // ==============================
-  const carrosselImgs = [
+ // ==============================
+ // 🖼️ CARROSSEL DE IMAGENS
+ // ==============================
+ const carrosselImgs = [
     "comunicado.jpeg",
-    "matricula.jpeg",
-    "rematricula.jpeg"
-  ];
-  let indexAtual = 0;
+  "matricula.jpeg",
+  "rematricula.jpeg"
+ ];
+ let indexAtual = 0;
 
-  const carrosselImg = document.getElementById("carrossel-img");
-  const btnPrev = document.getElementById("btn-prev");
-  const btnNext = document.getElementById("btn-next");
+ const carrosselImg = document.getElementById("carrossel-img");
+ const btnPrev = document.getElementById("btn-prev");
+ const btnNext = document.getElementById("btn-next");
 
-  function mudarImagem(direcao) {
-    if (direcao === "next") {
-      indexAtual = (indexAtual + 1) % carrosselImgs.length;
-    } else {
-      indexAtual = (indexAtual - 1 + carrosselImgs.length) % carrosselImgs.length;
-    }
+ function mudarImagem(direcao) {
+ if (direcao === "next") {
+  indexAtual = (indexAtual + 1) % carrosselImgs.length;
+ } else {
+  indexAtual = (indexAtual - 1 + carrosselImgs.length) % carrosselImgs.length;
+ }
 
     // Garante que a imagem exista antes de trocar
     if (carrosselImg) {
@@ -98,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
         carrosselImg.style.opacity = "1";
       }, 200);
     }
-  }
+ }
 
   // Garante que os botões do carrossel existam
   if (btnPrev && btnNext) {
@@ -106,10 +104,10 @@ document.addEventListener("DOMContentLoaded", () => {
     btnNext.addEventListener("click", () => mudarImagem("next"));
   }
 
-  // ==============================
-  // 🔒 LOGOUT (CÓDIGO NOVO)
-  // ==============================
-  const btnLogout = document.getElementById("btn-logout");
+ // ==============================
+ // 🔒 LOGOUT (CÓDIGO NOVO)
+ // ==============================
+ const btnLogout = document.getElementById("btn-logout");
 
   // Adiciona o evento de clique no botão "Sair"
   if (btnLogout) {
