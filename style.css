@@ -100,17 +100,12 @@ header {
 }
 
 .estudante-imagem {
- /* MANTIDO: Largura total do container (250px - padding) */
  width: 100%;
- /* NOVO: Define a altura igual à largura do container para criar um quadrado */
- height: 220px; /* Ajuste o valor se necessário, mas 220px é próximo da largura interna (250px - 2*15px = 220px) */
- /* NOVO: Garante que a imagem preencha o espaço sem distorcer e cortando o que não cabe */
+ height: 300px;
  object-fit: cover; 
- /* MANTIDO: Borda */
  border-radius: 10px;
 }
 
-/* ... código posterior ... */
 
 .estudante-nome {
   text-align: center;
@@ -145,18 +140,14 @@ footer.escola {
   text-decoration: none;
 }
 
-/* --- NOVOS ESTILOS PARA HEADER --- */
-
-/* Este é o novo container da direita */
 .cabecalho-direita {
   display: flex;
   align-items: center;
-  gap: 25px; /* Espaço entre os ícones sociais e o botão de login */
-  padding-right: 30px; /* Mantém o espaçamento da borda que você tinha */
+  gap: 25px;
+  padding-right: 30px;
 }
 
-/* Esta é a nova classe para os ícones sociais */
-/* (Você tinha a classe .sociais nas imagens, o que causava conflito) */
+
 .sociais-icone {
   width: 30px; 
   height: 30px;
@@ -169,7 +160,7 @@ footer.escola {
   transform: scale(1.2);
 }
 
-/* Container do botão de login */
+
 .login-area {
   display: flex;
   align-items: center;
@@ -177,7 +168,7 @@ footer.escola {
 
 /* Estilo do botão de login */
 .btn-login {
-  background-color: #40a2e3; /* Cor azul do seu site */
+  background-color: #40a2e3; 
   color: white;
   padding: 8px 20px;
   text-decoration: none;
