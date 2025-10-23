@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
  // ==============================
- // 🖼️ CARROSSEL DE IMAGENS
+ // CARROSSEL DE IMAGENS
  // ==============================
  const carrosselImgs = [
     "comunicado.jpeg",
@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
  // ==============================
- // 🔒 LOGOUT (CÓDIGO NOVO)
+ // LOGOUT (CÓDIGO NOVO)
  // ==============================
  const btnLogout = document.getElementById("btn-logout");
 
