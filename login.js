@@ -3,7 +3,7 @@ document.getElementById("btn-login").addEventListener("click", () => {
   const senha = document.getElementById("senha").value;
   const erro = document.getElementById("msgErro");
 
-  // Usuário e senha padrão que você pode mudar depois
+  // Usuário e senha
   if (usuario === "admin" && senha === "1234") {
     sessionStorage.setItem("logado", "true");
     window.location.href = "index.html"; // redireciona para a Home
